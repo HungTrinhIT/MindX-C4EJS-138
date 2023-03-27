@@ -1,0 +1,43 @@
+// Selector tagname
+p {
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: blueviolet;
+  font-size: 18px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+
+// Selector thông qua class
+.player {
+  border: 1px solid black;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+// .player-age {
+//   font-size: 80px;
+// }
+.player h4:nth-child(2n) {
+  background-color: brown;
+}
+.player h4:nth-child(2n + 1) {
+  background-color: chocolate;
+}
+
+// Selector thông qua id
+#m10 {
+  background-color: bisque;
+  border-radius: 16px;
+}
+
+// Trọng số là: 1+ 10 = 11
+h6.box {
+  color: red;
+}
+
+#box {
+  color: blue;
+}
