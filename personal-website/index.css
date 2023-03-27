@@ -1,0 +1,9 @@
+.section-wrapper {
+  height: 200px;
+  border: 1px solid black;
+  margin-bottom: 40px;
+  background: red;
+
+  padding-left: 64px;
+  padding-right: 64px;
+}
