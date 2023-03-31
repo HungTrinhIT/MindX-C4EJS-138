@@ -1,0 +1,54 @@
+.box {
+  width: 350px;
+  height: 200px;
+  background: red;
+
+  /* Padding là khoảng cách từ content tới border(vieefn) */
+  /* Padding 4 chiều: top, right, bottom, left */
+  /* padding: 40px; */
+
+  /* padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 16px;
+  padding-left: 8px; */
+
+  /* padding: top right bottom left */
+  /* padding: 30px 15px 30px 15px; */
+
+  /* padding: y x */
+  /* padding: 30px 15px; */
+
+  /* padding: top left-right bottom  */
+  padding: 30px 24px 16px;
+
+  /* border-width: 3px;
+  border-color: black;
+  border-style: solid; */
+  border: 3px black solid;
+
+  /* Margin 4 chiều: top, right, bottom, left */
+  margin: 16px;
+}
+
+.box2 {
+  width: 100px;
+  height: 150px;
+  background: yellow;
+  padding: 24px;
+}
+
+.box3 {
+  width: 250px;
+  height: 250px;
+  background-color: chocolate;
+}
+
+/* 
+    actualWidth = 2*border + 2*padding + content
+
+                 top (gốc) => xoay theo chiều kim đồng hồ
+
+        left            right
+
+               bottom
+*/
