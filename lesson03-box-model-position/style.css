@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .box {
   width: 350px;
   height: 200px;
@@ -40,6 +43,7 @@
 .box3 {
   width: 250px;
   height: 250px;
+  border-radius: 50%;
   background-color: chocolate;
 }
 
@@ -52,3 +56,60 @@
 
                bottom
 */
+
+/* Demo position */
+.position-static {
+  position: static;
+}
+.position-fix {
+  margin: 60px 0;
+  width: 200px;
+  height: 150px;
+  background-color: yellowgreen;
+  position: relative;
+  top: 50px;
+  left: 40px;
+}
+
+.parent {
+  background: orchid;
+  width: 600px;
+  height: 450px;
+  position: relative;
+}
+
+.child {
+  background: #000;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.child:hover {
+  width: 200px;
+  height: 200px;
+}
+
+/* Header */
+header {
+  background: #000;
+  margin-bottom: 40px;
+  padding: 24px 16px;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.btn-back {
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: cadetblue;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
