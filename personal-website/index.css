@@ -1,5 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
 }
 
 .section-wrapper {
@@ -10,26 +17,23 @@ body {
 
 /* Header */
 header {
+  background: rgb(1, 20, 62);
+  color: #ffffff;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .nav-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #000;
-  color: white;
-  margin-bottom: 24px;
-  padding: 10px 40px;
-}
-header .nav-list {
   list-style: none;
-  display: flex;
   gap: 16px;
 }
 
-header .nav-item {
-  cursor: pointer;
-}
-
-header .nav-item.active {
-  text-transform: uppercase;
+header nav .nav-list .nav-item {
+  // margin: 0 16px;
 }
 
 /* Section hero */
@@ -41,4 +45,8 @@ header .nav-item.active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#hero {
+  padding-top: 60px;
 }
