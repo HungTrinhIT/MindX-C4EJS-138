@@ -1,0 +1,79 @@
+.main {
+  height: 300px;
+}
+
+/* body {
+  background: rgb(20, 203, 223);
+  color: black;
+} */
+
+/* @media not|only mediatype and (mediafeature: value) */
+/* Media type: screen(*), print, speech */
+
+.hero {
+  background-color: black;
+  color: white;
+  background-color: #ececec;
+  background-color: linear-gradient();
+}
+.office {
+  background-image: url("./images/office-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+/* Nó chỉ apply cho những màn hình width < hoặc = 480px */
+/* Desktop first */
+@media only screen and (max-width: 480px) {
+  .hero {
+    background-color: blue;
+    border-radius: 40px;
+  }
+}
+
+.product-list {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  gap: 12px;
+  background: blueviolet;
+}
+.product-item {
+  padding: 36px;
+  border: 1px solid black;
+  border-radius: 16px;
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .product-list {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+}
+
+/* Device <= 600px hoặc device >=800px */
+/* 
+    0 - 600
+    600 - 800
+    > 800
+ */
+.user {
+  color: black;
+}
+@media (max-width: 600px), (min-width: 800px) {
+  .user {
+    color: blue;
+  }
+}
