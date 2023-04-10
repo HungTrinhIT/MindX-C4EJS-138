@@ -1,0 +1,76 @@
+a:link {
+  color: red;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:visited {
+  color: grey;
+}
+
+.parent {
+  background-color: aquamarine;
+  padding: 20px;
+}
+.child {
+  background: yellow;
+  display: none;
+}
+
+.parent:hover .child {
+  display: block;
+  transition: display 0.5s;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.5);
+}
+
+.box2 {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+}
+
+.box2::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: yellow;
+}
+.box2::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: blue;
+}
+
+// .circle {
+//   width: 60px;
+//   height: 60px;
+//   border-radius: 50%;
+//   background: yellow;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
