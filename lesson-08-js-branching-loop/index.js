@@ -226,3 +226,53 @@ for (let i = 1; i <= 10; i++) {
 }
 
 console.log(" Tổng các số chẵn từ 1 đến 10 là:", sumOfEvenNumberFromOneToTen);
+
+// Bài 1
+// Đếm xem từ 1 tới 15 có bao nhiêu ước
+// Gợi ý dùng vòng lặp for,
+// tạo một biến đếm lưu trữ số lượng ước
+let countDivisor = 0;
+for (let i = 1; i <= 15; i++) {
+  if (15 % i === 0) {
+    // countDivisor = countDivisor + 1;
+    countDivisor += 1;
+  }
+}
+console.log("Số lượng ước của 15 là:", countDivisor);
+// Bài 2
+// Tính tổng các ước từ 1 đến 15
+// Gợi ý dùng vòng lặp for,
+// tạo một biến tổng lưu trữ số lượng ước
+
+let sumOfDivisor = 0;
+for (let i = 1; i <= 15; i++) {
+  if (15 % i === 0) {
+    sumOfDivisor += i;
+  }
+}
+console.log("Tổng các ước của 15 là:", sumOfDivisor);
+// 1 ,3 5, 15
+
+// Bài 3
+// Tính tổng các số chẵn từ 10 đến 50
+
+let sumFrom10_to_50For = 0;
+for (let i = 10; i <= 50; i++) {
+  if (i % 2 === 0) {
+    // sumFrom10_to_50For = sumFrom10_to_50For + i;
+    sumFrom10_to_50For += i;
+  }
+}
+
+console.log("FOR: Tổng các số chẵn từ 10 đến 50 ", sumFrom10_to_50For);
+
+let index = 10;
+let sumFrom10_to_50While = 0;
+while (index <= 50) {
+  if (index % 2 === 0) {
+    sumFrom10_to_50While += index;
+  }
+
+  index++;
+}
+console.log("While: Tổng các số chẵn từ 10 đến 50 ", sumFrom10_to_50While);
