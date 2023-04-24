@@ -11,6 +11,34 @@ function getDayFromMonthAndYear(month, year) {
   let result;
   // Logic
 
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      result = 31;
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      result = 30;
+    case 2:
+      // Logic kiểm tra xem có 28 hay 29 ngày nha
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        result = 29;
+      } else {
+        result = 28;
+      }
+      break;
+    default:
+      result = -1;
+      break;
+  }
+
   return result;
 }
 console.log(getDayFromMonthAndYear(2, 2016)); // 29
@@ -29,9 +57,9 @@ function findMax(nums) {
 
   return maxNumber;
 }
-console.log(findMax([1, 1, 1, 1])); // 1
-console.log(findMax([-1, 10, 100, 15, -20, 0])); // 100
-console.log(findMax([8, 20, 15, 16, 17, -100, -200, -18])); //17
+// console.log(findMax([1, 1, 1, 1])); // 1
+// console.log(findMax([-1, 10, 100, 15, -20, 0])); // 100
+// console.log(findMax([8, 20, 15, 16, 17, -100, -200, -18])); //17
 
 /* ------------------------------------------------------
     Bài 3
@@ -45,9 +73,9 @@ function findMin(nums) {
 
   return minNumber;
 }
-console.log(findMin([1, 1, 1, 1])); // 1
-console.log(findMin([-1, 10, 100, 15, -20, 0])); // -20
-console.log(findMin([8, 20, 15, 16, 17, -100, -605, -18])); // -605
+// console.log(findMin([1, 1, 1, 1])); // 1
+// console.log(findMin([-1, 10, 100, 15, -20, 0])); // -20
+// console.log(findMin([8, 20, 15, 16, 17, -100, -605, -18])); // -605
 
 /* ------------------------------------------------------
     Bài 4
@@ -73,9 +101,9 @@ function insert(array, position, value) {
 
 const test_array = [10, -5, 6, 8, 7];
 
-console.log(insert(test_array, 1, 100)); // [10,100, -5, 6, 8, 7]
-console.log(insert(test_array, 5, 10000)); // [10, -5, 6, 8, 7, 10000]
-console.log(insert(test_array, 0, 8888)); // [ 8888,10, -5, 6, 8, 7]
+// console.log(insert(test_array, 1, 100)); // [10,100, -5, 6, 8, 7]
+// console.log(insert(test_array, 5, 10000)); // [10, -5, 6, 8, 7, 10000]
+// console.log(insert(test_array, 0, 8888)); // [ 8888,10, -5, 6, 8, 7]
 
 /*------------------------------------------------------
     Bài 6
