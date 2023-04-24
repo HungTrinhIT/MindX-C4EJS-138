@@ -106,7 +106,6 @@ const person = {
     },
   },
 };
-console.log(person.address.city.cityName);
 
 if (Boolean(person.isHandsome)) {
   console.log("Bạn đẹp trai nhất đấy, xứng đáng có 10 người yêu");
@@ -158,6 +157,89 @@ for (let i = 0; i < outlinerInput.length; i++) {
   // Ngược lại push vô mảng oddNumbers
 }
 
-// Kiểm tra mảng nào có 1 phần tử 
+// Kiểm tra mảng nào có 1 phần tử
 
 // thì thằng ngoại lai là phần tử thứ 0 của mảng đó
+
+/*
+  1. Thêm phần tử vào đầu/cuối/ một vị trí bất kì trong mảng
+  2. Xoá phần tử đầu/cuối/một ví trị bất kì trong mảng
+  3. Săp xếp mảng theo thứ tự tăng dần/giảm dần
+  4. Nối mảng từ 2 hay nhiều mảng
+  5. Duyệt mảng
+  6. Truy xuất một phần tử bất kì trong mảng
+  7. Tìm giá trị lớn nhất trong mảng
+  8. Tìm giá trị nhỏ nhất trong mảng
+*/
+
+// Function
+const students = [
+  {
+    name: "Nguyen Van A",
+    gender: "male",
+    math: 8,
+    english: 7,
+    chemischy: 6,
+  },
+  {
+    name: "Nguyen Van B",
+    gender: "male",
+    math: 10,
+    english: 4,
+    chemischy: 2,
+  },
+  {
+    name: "Nguyen Thi C",
+    gender: "female",
+    math: 10,
+    english: 5,
+    chemischy: 3,
+  },
+];
+
+// const gpa_1 =
+//   (students[0].math + students[0].chemischy + students[0].english) / 3;
+// const gpa_2 =
+//   (students[1].math + students[1].chemischy + students[1].english) / 3;
+// const gpa_3 =
+//   (students[3].math + students[3].chemischy + students[3].english) / 3;
+
+// Input: diem toan, diem tieng anh, diem hoa
+// Output: Diem trung binh
+// Function => hàm
+
+// Function không có tham số đầu vào
+function greeting() {
+  console.log("Hello bro, welcome to MindX Technology");
+}
+
+greeting();
+greeting();
+greeting();
+
+// Function với 1 tham số đầu vào
+function greetingWithName(name) {
+  console.log("Hello " + name + ", welcome to MindX Technology");
+}
+greetingWithName("Ronaldo");
+greetingWithName("Messi");
+greetingWithName("Mitoma");
+
+function calculateScore(math, chemistry, english) {
+  const result = (math + chemistry + english) / 3;
+
+  return result;
+}
+const studentAScore = calculateScore(10, 8, 7);
+const studentBScore = calculateScore(6, 5, 10);
+console.log("Điểm trung bình của HS A là:", studentAScore);
+console.log("Điểm trung bình của HS B là:", studentBScore);
+
+if (studentAScore > studentBScore) {
+  console.log("Học sinh A học giỏi hơn học sinh B");
+} else {
+  console.log("Học sinh B học giỏi hơn học sinh A");
+}
+
+// Primitive datatype (kiểu dữ liệu nguyên thuỷ)
+// Reference datatype: array, object (kiểu dữ liệu tham chiếu)
