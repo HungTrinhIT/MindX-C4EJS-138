@@ -8,9 +8,6 @@
 */
 
 function getDayFromMonthAndYear(month, year) {
-  let result;
-  // Logic
-
   switch (month) {
     case 1:
     case 3:
@@ -19,31 +16,26 @@ function getDayFromMonthAndYear(month, year) {
     case 8:
     case 10:
     case 12:
-      result = 31;
-      break;
+      return 31;
     case 4:
     case 6:
     case 9:
     case 11:
-      result = 30;
+      return 30;
     case 2:
       // Logic kiểm tra xem có 28 hay 29 ngày nha
       if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-        result = 29;
+        return 29;
       } else {
-        result = 28;
+        return 28;
       }
-      break;
     default:
-      result = -1;
-      break;
+      return -1;
   }
-
-  return result;
 }
-console.log(getDayFromMonthAndYear(2, 2016)); // 29
-console.log(getDayFromMonthAndYear(3, 2016)); // 31
-console.log(getDayFromMonthAndYear(13, 2016)); // -1
+// console.log(getDayFromMonthAndYear(2, 2016)); // 29
+// console.log(getDayFromMonthAndYear(3, 2016)); // 31
+// console.log(getDayFromMonthAndYear(13, 2016)); // -1
 
 /* ------------------------------------------------------
     Bài 2
@@ -52,14 +44,20 @@ console.log(getDayFromMonthAndYear(13, 2016)); // -1
     Output: Giá trị lớn nhất của mảng
 */
 function findMax(nums) {
-  let maxNumber;
+  let maxNumber = nums[0];
   // Your code here
+  for (let i = 0; i < nums.length; i++) {
+    // So sánh
+    if (nums[i] > maxNumber) {
+      maxNumber = nums[i];
+    }
+  }
 
   return maxNumber;
 }
-// console.log(findMax([1, 1, 1, 1])); // 1
-// console.log(findMax([-1, 10, 100, 15, -20, 0])); // 100
-// console.log(findMax([8, 20, 15, 16, 17, -100, -200, -18])); //17
+console.log(findMax([1, 1, 1, 1])); // 1
+console.log(findMax([-1, 10, 100, 15, -20, 0])); // 100
+console.log(findMax([8, 20, 15, 16, 17, -100, -200, -18])); //20
 
 /* ------------------------------------------------------
     Bài 3
@@ -70,19 +68,18 @@ function findMax(nums) {
 function findMin(nums) {
   let minNumber;
   // Your code here
+  for (let i = 0; i < nums.length; i++) {
+    // So sánh
+    if (nums[i] < minNumber) {
+      minNumber = nums[i];
+    }
+  }
 
   return minNumber;
 }
 // console.log(findMin([1, 1, 1, 1])); // 1
 // console.log(findMin([-1, 10, 100, 15, -20, 0])); // -20
 // console.log(findMin([8, 20, 15, 16, 17, -100, -605, -18])); // -605
-
-/* ------------------------------------------------------
-    Bài 4
-    Viết một function để tìm số nhỏ trong mảng một chiều
-    Input: Mảng một chiều các số nguyên
-    Output: Giá trị nhỏ nhất của mảng
-*/
 
 /* ------------------------------------------------------
     Bài 5
@@ -94,16 +91,18 @@ function findMin(nums) {
     Output: mảng mới với giá trị đã được chèn vào
 */
 function insert(array, position, value) {
-  let insertedArray = [];
+  let firstArr = array.slice(0, position);
+  let lastArr = array.slice(position, array.length);
 
-  return insertedArray;
+  firstArr.push(value);
+  return firstArr.concat(lastArr);
 }
 
 const test_array = [10, -5, 6, 8, 7];
 
-// console.log(insert(test_array, 1, 100)); // [10,100, -5, 6, 8, 7]
-// console.log(insert(test_array, 5, 10000)); // [10, -5, 6, 8, 7, 10000]
-// console.log(insert(test_array, 0, 8888)); // [ 8888,10, -5, 6, 8, 7]
+console.log("Bài 5", insert(test_array, 1, 100)); // [10,100, -5, 6, 8, 7]
+console.log("Bài 5", insert(test_array, 5, 10000)); // [10, -5, 6, 8, 7, 10000]
+console.log("Bài 5", insert(test_array, 0, 8888)); // [ 8888,10, -5, 6, 8, 7]
 
 /*------------------------------------------------------
     Bài 6
@@ -114,6 +113,10 @@ const test_array = [10, -5, 6, 8, 7];
 function arrayValuesTypes(array) {
   let new_array = [];
   // Your code here
+  for (let i = 0; i < array.length; i++) {
+    const value = array[i];
+    new_array.push(typeof value);
+  }
 
   return new_array;
 }
@@ -131,12 +134,36 @@ console.log(
 
 // Bài 7
 /* ------------------------------------------------------
-    Viết một hàm, kết quả trả về là một mảng bao gồm các phần tử khác biệt từ 2 mảng cho trước
+    Viết một hàm, kết quả trả về là một mảng 
+    bao gồm các phần tử khác biệt từ 2 mảng cho trước
 */
-function difference(arr1, arr2) {
-  var arr = [];
 
-  return arr;
+// tìm thấy finNumber => return vị trí index tìm thấy
+// tìm không thấy => return -1
+function findIndex(arr, findNumber) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === findNumber) {
+      return i;
+    }
+  }
+
+  return -1;
 }
-console.log(difference([1, 2, 3], [100, 2, 1, 10]));
-//["1", "2", "3", "10", "100"]
+
+function difference(arr1, arr2) {
+  let result = arr1;
+  for (let i = 0; i < arr2.length; i++) {
+    const element = arr2[i];
+    // không tìm thấy trong mảng arr1
+    // thì đi push cái mảng result
+    if (findIndex(result, element) === -1) {
+      result.push(element);
+    }
+  }
+
+  return result;
+}
+console.log(difference([1, 2, 3], [10, 10, 10, 5, 7, 3, 4, 100, 2, 1, 10]));
+
+//[1, 2, 3], [100, 2, 1, 10]
+// [1,2,3,100 ,10]
