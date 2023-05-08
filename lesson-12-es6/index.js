@@ -119,3 +119,31 @@ const getGPA_2 = (scores) => {
 };
 
 console.log("Điểm TB cách 2:", getGPA_2(scores));
+
+
+/*
+  I. Test
+  1. Problem solving => Javascript =>
+    + Flow control: if, else, else if, switch case
+    + for, for...in, while
+    + data types
+    + array, array manipulation
+    + object, object manipulation
+    + ES6
+      . destructering
+      . arrow function
+      . template literals
+      . default value
+      . array function: map, filter, reduce, some, every
+    
+  2. HTML, CSS, Javascript DOM
+    + Figma
+    + fetch()
+
+    
+  II. Project 
+  - Landing page
+    + Showcase những sản phẩm của nhà hàng
+    + Dự báo thời tiết: dữ liệu weather API
+    
+*/ 

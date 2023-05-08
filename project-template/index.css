@@ -142,6 +142,43 @@ body {
   object-fit: cover;
 }
 
+#courses {
+  margin-top: 80px;
+  margin-bottom: 64px;
+}
+
+#courses h2 {
+  margin-bottom: 40px;
+}
+.courses {
+  display: flex;
+  gap: 24px;
+}
+.course-item {
+  width: calc(25% - 24px);
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.course-item img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+.course-item .course-info {
+  padding: 24px;
+}
+.course-item h5 {
+  color: #1f1d2a;
+  margin: 8px 0 16px 0;
+  font-size: 24px;
+}
+
+.course-item p {
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     padding: 0 68px;
