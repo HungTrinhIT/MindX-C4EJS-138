@@ -80,3 +80,42 @@ const preprocessingStudentData = (students) => {
 };
 
 console.log("Data dã được xử lý:", preprocessingStudentData(studentsInput));
+
+// [1 , 10, 5, 7, 9 ,8 , 2];
+const filterFunctionInput = [1, 10, 5, 7, 9, 8, 2];
+// const evenNumbers = filterFunctionInput.filter((num) => {
+//   const isEvenNumber = num % 2 === 0;
+//   return isEvenNumber;
+// });
+
+const evenNumbers = filterFunctionInput.filter((num) => num % 2 === 0);
+console.log("Mảng các số chẵn là:", evenNumbers);
+
+const scores = [
+  { score: 90, subject: "HTML", weight: 0.2 },
+  { score: 95, subject: "CSS", weight: 0.3 },
+  { score: 85, subject: "JavaScript", weight: 0.5 },
+];
+
+// Cách 1
+const getGPA_1 = (scores) => {
+  let gpa = 0;
+
+  for (let i = 0; i < scores.length; i++) {
+    const subject = scores[i];
+    gpa += subject.score * subject.weight;
+  }
+
+  return gpa;
+};
+
+console.log("Điểm TB cách 1:", getGPA_1(scores));
+
+// Cách 2: Dùng hàm reduce
+const getGPA_2 = (scores) => {
+  return scores.reduce((gpa, subject) => {
+    return gpa + subject.score * subject.weight;
+  }, 0);
+};
+
+console.log("Điểm TB cách 2:", getGPA_2(scores));
