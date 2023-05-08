@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm" action="callAPI.js" method="POST">
+      <input type="text" name="username" placeholder="username" />
+      <input type="submit" value="Send" />
+    </form>
+    <script>
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Xoá đi hành vi mặc định của form -> Không bị submit và chuyển hướng trang web nữa.
+        // logic here
+      });
+    </script>
+  </body>
+</html>
