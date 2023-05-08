@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="./login.html" id="form">
+      <h2>Register</h2>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" placeholder="Your email..." id="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Your password..." id="password" />
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          placeholder="Confirm Password..."
+          id="confirmPassword"
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn">send</button>
+      </div>
+      <div id="valid">
+        <p id="valid"></p>
+        <p id="validEmail"></p>
+        <p id="validPasswordlength6"></p>
+        <p id="validPasswordTextUpperCase"></p>
+        <p id="validConfirmPassword"></p>
+      </div>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>

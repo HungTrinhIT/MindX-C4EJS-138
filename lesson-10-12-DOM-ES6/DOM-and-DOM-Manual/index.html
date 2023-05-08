@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buổi 12: ES6</title>
+    <!-- Viết script ở trong head -> SAI -->
+    <!-- <script>
+      const mainContentElement = document.getElementById("mainContent");
+      mainContentElement.innerText = "Hello Everybody!";
+    </script> -->
+  </head>
+  <body>
+    <h1 id="mainContent">Ôn lại về DOM</h1>
+    <ul>
+      <!-- WHAT? -->
+      <li>Document Object Model - Mô hình hoá tài liệu dưới dạng đối tượng.</li>
+      <li>
+        Bao gồm 3 thành phần chính (Nodes): Element Node, Attribute Node, Text
+        Node
+      </li>
+      <li>
+        Javascript có thể tương tác với HTML thông qua DOM (đọc, thêm, xoá,
+        sửa..)
+      </li>
+      <li>
+        Có 5 cách để query Element trong DOM:
+        <br />
+        getElementById,
+        <br />
+        getElementsByClassName,
+        <br />
+        getElementsByTagName,
+        <br />
+        querySelector,
+        <br />
+        querySelectorAll
+      </li>
+    </ul>
+    <img src="" alt="" />
+    <h1>Buổi 12: ES6</h1>
+
+    <ul class="list">
+      <li class="item-languages">Javascript</li>
+      <li class="item-languages">PHP</li>
+      <li class="item-languages">Python</li>
+    </ul>
+    <script>
+      const languagesListElement =
+        document.getElementsByClassName("item-languages")[2];
+      console.log(languagesListElement);
+      const h1Element = document.getElementsByTagName("h1"); // Trả ra một HTMLCollection
+
+      const languagesListElement2 = document.querySelectorAll(
+        "ul.list > li.item-languages"
+      );
+      console.log(languagesListElement2);
+      const languagesListElementItem = document.querySelector(
+        "ul.list > li.item-languages"
+      );
+      console.log(languagesListElementItem);
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
