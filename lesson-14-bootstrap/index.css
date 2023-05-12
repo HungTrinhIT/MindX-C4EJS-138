@@ -4,9 +4,14 @@
   margin: 0;
 }
 
+body {
+  /* px, inch, cm */
+  /* % , rem */
+  /* 1 rem = 16px */
+}
+
 .item {
   border: 1px solid black;
-  padding: 40px 60px;
 }
 .item-1 {
   background: #000;
@@ -23,4 +28,7 @@
 .item-4 {
   background: #52bd38;
   color: #000;
+}
+.inside-item {
+  background: orange;
 }

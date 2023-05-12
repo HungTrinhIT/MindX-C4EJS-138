@@ -152,6 +152,7 @@ body {
 }
 .courses {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 .course-item {
@@ -177,6 +178,20 @@ body {
 
 .course-item p {
   font-size: 14px;
+}
+
+.add-course-btn {
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 8px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.add-course-btn:hover {
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 1024px) {

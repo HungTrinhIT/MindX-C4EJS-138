@@ -8,6 +8,12 @@
     <!-- Link CSS File -->
     <link rel="stylesheet" href="./index.css" />
 
+    <!-- Bootstrap CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    />
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +42,7 @@
       </nav>
 
       <div class="header-cta">
-        <button class="header-cta-btn">Register Now</button>
+        <a class="header-cta-btn" href="./cart.html">Cart</a>
       </div>
     </header>
     <!-- End Header section -->
@@ -89,6 +95,7 @@
     <section id="courses" class="container">
       <h2>Popular courses</h2>
       <div class="courses"></div>
+      <button onclick="onAddProductToCart()"></button>
     </section>
     <!-- End Section employees -->
 
@@ -96,7 +103,9 @@
     <footer></footer>
     <!-- End footer -->
 
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
 
