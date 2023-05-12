@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border: 1px solid black;
+  padding: 40px 60px;
+}
+.item-1 {
+  background: #000;
+  color: white;
+}
+.item-2 {
+  background: blueviolet;
+  color: white;
+}
+.item-3 {
+  background: red;
+  color: white;
+}
+.item-4 {
+  background: #52bd38;
+  color: #000;
+}
